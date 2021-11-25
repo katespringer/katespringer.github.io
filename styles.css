@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 1px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+#grid-layout {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas:
+  'header header header'
+  'main main side'
+  'footer footer footer';
+}
+
+.cell {
+  padding: 120px;
+}
+.head {
+  grid-area: header;
+  background: #ffe5db;
+}
+.main {
+  grid-area: main;
+  background: #e3ffdb;
+}
+.side {
+  grid-area: side;
+  background: #dbf8ff;
+}
+.foot {
+  grid-area: footer;
+  background: #ebebeb;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
